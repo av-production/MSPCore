@@ -19,6 +19,7 @@ if TYPE_CHECKING:
 
 class Player:
     def __init__(self, core: MSPCore):
+        self.events = core.events
         self.config = core.config.player
         mpv_options = {
             "demuxer_lavf_o": "http_persistent=false",
@@ -38,7 +39,7 @@ class Player:
         self.track_list: list[Track] = []
         self.track: Track = Track()
         self.track_index: int = -1
-        self.state = State.Stopped
+        self._state = State.Stopped
         self.mode = Mode.TrackList
         self.volume = self.config.default_volume
 
@@ -266,3 +267,13 @@ class Player:
                 new_name = html.unescape(self._player.media_title)
             if self.track.name != new_name and new_name:
                 self.track.name = new_name
+        self.events.player_track_update(self.track)
+
+    @property
+    def state(self) -> State:
+        return self._state
+
+    @state.setter
+    def state(self, state: State):
+        self._state = state
+        self.events.player_state_update(state)

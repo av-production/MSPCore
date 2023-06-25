@@ -1,12 +1,11 @@
 from __future__ import annotations
 
-import copy
 import os
 from threading import Lock
 from typing import Any, TYPE_CHECKING
 
-from MSPCore.player.enums import TrackType
 from MSPCore import utils
+from MSPCore.player.enums import TrackType
 
 if TYPE_CHECKING:
     from MSPCore.services import Service
@@ -87,6 +86,8 @@ class Track:
 
     @staticmethod
     def from_dict(dict_: dict[str, Any]) -> Track:
+        from MSPCore.services import ServiceManager
+
         return Track(
             name=dict_["name"],
             url=dict_["url"],
@@ -95,7 +96,6 @@ class Track:
         )
 
     def __bool__(self):
-        from MSPCore.services import ServiceManager
         if self.service or self.url:
             return True
         return False

@@ -4,6 +4,7 @@ from typing import Any
 
 from MSPCore import (
     config,
+    events,
     player,
     services,
     url_handler,
@@ -28,6 +29,7 @@ class MSPCore:
                     error["msg"],
                 )
             sys.exit(1)
+        self.events = events.Events()
         self.player = player.Player(self)
         self.service_manager = services.ServiceManager(self)
         self.url_handler = url_handler.UrlHandler(self)
