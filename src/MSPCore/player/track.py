@@ -4,11 +4,11 @@ import os
 from threading import Lock
 from typing import Any, TYPE_CHECKING
 
-from MSPCore import utils
-from MSPCore.player.enums import TrackType
+from mspcore import utils
+from mspcore.player.enums import TrackType
 
 if TYPE_CHECKING:
-    from MSPCore.services import Service
+    from mspcore.services import Service
 
 
 class Track:

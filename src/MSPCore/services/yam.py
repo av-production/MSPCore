@@ -5,16 +5,16 @@ from typing import Any, TYPE_CHECKING
 from urllib.parse import urlparse
 
 if TYPE_CHECKING:
-    from MSPCore import MSPCore
+    from mspcore import MSPCore
 
 from yandex_music import Client
 from yandex_music.exceptions import NetworkError, UnauthorizedError
 
-from MSPCore.config import YamModel
-from MSPCore.player.enums import TrackType
-from MSPCore.player.track import Track
-from MSPCore.services import Service
-from MSPCore import errors
+from mspcore.config import YamModel
+from mspcore.player.enums import TrackType
+from mspcore.player.track import Track
+from mspcore.services import Service
+from mspcore import errors
 
 
 class YamService(Service):

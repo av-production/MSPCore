@@ -1,8 +1,8 @@
 import logging
 from typing import Callable, Generic, TypeVarTuple, Unpack
 
-from MSPCore.player.enums import State
-from MSPCore.player.track import Track
+from mspcore.player.enums import State
+from mspcore.player.track import Track
 
 
 T = TypeVarTuple("T")

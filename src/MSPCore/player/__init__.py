@@ -6,15 +6,15 @@ import random
 import time
 from typing import Any, Callable, TYPE_CHECKING
 
-from MSPCore import errors
-from MSPCore.player.enums import Mode, State, TrackType
-from MSPCore.player.sound_device import SoundDevice
-from MSPCore.player.track import Track
+from mspcore import errors
+from mspcore.player.enums import Mode, State, TrackType
+from mspcore.player.sound_device import SoundDevice
+from mspcore.player.track import Track
 
 import mpv
 
 if TYPE_CHECKING:
-    from MSPCore import MSPCore
+    from mspcore import MSPCore
 
 
 class Player:

@@ -4,12 +4,12 @@ import os
 from typing import TYPE_CHECKING
 from urllib.parse import urlparse
 
-from MSPCore import errors
-from MSPCore.player.enums import TrackType
-from MSPCore.player.track import Track
+from mspcore import errors
+from mspcore.player.enums import TrackType
+from mspcore.player.track import Track
 
 if TYPE_CHECKING:
-    from MSPCore import MSPCore
+    from mspcore import MSPCore
 
 
 class UrlHandler:

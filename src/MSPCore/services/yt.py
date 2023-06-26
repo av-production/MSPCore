@@ -4,17 +4,17 @@ import logging
 from typing import Any, TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from MSPCore import MSPCore
+    from mspcore import MSPCore
 
 from yt_dlp import YoutubeDL
 from yt_dlp.downloader import get_suitable_downloader
 from youtubesearchpython import VideosSearch
 
-from MSPCore import errors
-from MSPCore.config import YtModel
-from MSPCore.player.enums import TrackType
-from MSPCore.player.track import Track
-from MSPCore.services import Service as _Service
+from mspcore import errors
+from mspcore.config import YtModel
+from mspcore.player.enums import TrackType
+from mspcore.player.track import Track
+from mspcore.services import Service as _Service
 
 
 class YtService(_Service):

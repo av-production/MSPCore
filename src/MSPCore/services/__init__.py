@@ -3,13 +3,13 @@ from abc import ABC, abstractmethod
 import logging
 from typing import Any, TYPE_CHECKING
 
-from MSPCore import downloader
+from mspcore import downloader
 
-from MSPCore import errors
+from mspcore import errors
 
 if TYPE_CHECKING:
-    from MSPCore import MSPCore
-    from MSPCore.player.track import Track
+    from mspcore import MSPCore
+    from mspcore.player.track import Track
 
 
 class Service(ABC):
@@ -42,9 +42,9 @@ class Service(ABC):
         ...
 
 
-from MSPCore.services.vk import VkService
-from MSPCore.services.yam import YamService
-from MSPCore.services.yt import YtService
+from mspcore.services.vk import VkService
+from mspcore.services.yam import YamService
+from mspcore.services.yt import YtService
 
 
 class ServiceManager:

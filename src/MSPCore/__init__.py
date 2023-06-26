@@ -2,7 +2,7 @@ import logging
 import sys
 from typing import Any
 
-from MSPCore import (
+from mspcore import (
     config,
     events,
     player,

@@ -8,15 +8,15 @@ import requests
 
 import vk_api.exceptions
 
-from MSPCore import errors
-from MSPCore.config import VkModel
-from MSPCore.player.track import Track
-from MSPCore.services import Service as _Service
+from mspcore import errors
+from mspcore.config import VkModel
+from mspcore.player.track import Track
+from mspcore.services import Service as _Service
 
 import mpv
 
 if TYPE_CHECKING:
-    from MSPCore import MSPCore
+    from mspcore import MSPCore
 
 
 class VkService(_Service):

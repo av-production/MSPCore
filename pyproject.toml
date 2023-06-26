@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mspcore"
+version = "1.0.0"
+authors = [
+    {name = "av-production", email = "gumerov.amir.e@gmail.com"}
+]
+description = "Multi-service player core"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "mpv",
+    "pydantic",
+    "requests",
+    "vk-api",
+    "yandex-music",
+    "youtube-search-python",
+    "yt-dlp"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "flake8-black",
+    "flake8-bandit",
+    "flake8-commas",
+    "flake8-eradicate",
+    "flake8-import-order",
+    "flake8-quotes"
+]
+
+[project.urls]
+homepage = "https://github.com/av-production/MSPCore"
+
+[tools.flake8]
+inline-quotes = "\""
+max-line-length = 88
