@@ -40,6 +40,9 @@ dev = [
 [project.urls]
 homepage = "https://github.com/av-production/MSPCore"
 
+[tool.setuptools.package-data]
+"mspcore" = ["py.typed"]
+
 [tools.flake8]
 inline-quotes = "\""
 max-line-length = 88
